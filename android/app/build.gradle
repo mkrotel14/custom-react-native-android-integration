@@ -73,16 +73,16 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
     namespace "com.nativeintegration"
-    ndkVersion "25.1.8937393"
-//    ndkVersion = "23.1.7779620"
-    compileSdk = 34
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
         applicationId "com.nativeintegration"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
 
         vectorDrawables {
             useSupportLibrary = true
